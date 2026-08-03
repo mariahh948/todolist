@@ -100,3 +100,11 @@ function toggleTask(index) {
 function saveToLocalStorage() {
     localStorage.setItem("todo", JSON.stringify(todo))
 }
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("Service Worker Registered"))
+            .catch(err => console.log(err));
+    });
+}
