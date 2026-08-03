@@ -104,7 +104,7 @@ function saveToLocalStorage() {
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")
-            .then(() => console.log("Service Worker Registered"))
+            .then(reg => console.log("Service Worker Registered", reg))
             .catch(err => console.log(err));
     });
 }
