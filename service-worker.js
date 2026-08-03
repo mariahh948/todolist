@@ -2,9 +2,11 @@ const CACHE_NAME = "todo-v1";
 
 const urlsToCache = [
     "/",
-    "/index.html",
-    "/style.css",
-    "/script.js"
+    "./index.html",
+    "./style.css",
+    "./script.js",
+    "./todoThumbnail.png",
+    "./manifest.json"
 ];
 
 self.addEventListener("install", event => {
@@ -12,6 +14,10 @@ self.addEventListener("install", event => {
         caches.open(CACHE_NAME)
             .then(cache => cache.addAll(urlsToCache))
     );
+});
+
+self.addEventListener("activate", event => {
+    event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener("fetch", event => {
