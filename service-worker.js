@@ -1,7 +1,7 @@
 const CACHE_NAME = "todo-v1";
 
 const urlsToCache = [
-    "/",
+    "./",
     "./index.html",
     "./style.css",
     "./script.js",
