@@ -28,6 +28,20 @@ body {
     align-items: center;
 }
 
+.stamp {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 2px;
+    left: 0px;
+}
+
+.stamp img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
 .favicon {
     height: 32px;
     width: 32px;

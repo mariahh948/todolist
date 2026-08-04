@@ -7,6 +7,7 @@ const urlsToCache = [
     "./script.js",
     "./thumbnail-192.png",
     "./thumbnail-512.png",
+    "./stamp.PNG",
     "./manifest.json"
 ];
 
